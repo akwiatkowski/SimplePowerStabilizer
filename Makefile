@@ -1,6 +1,5 @@
 PRG            = main
 OBJ            = main.o
-MCU_TARGET      = at90pwm3b 
 #MCU_TARGET     = at90s2313
 #MCU_TARGET     = at90s2333
 #MCU_TARGET     = at90s4414
@@ -13,6 +12,7 @@ MCU_TARGET      = at90pwm3b
 #MCU_TARGET     = atmega1281
 #MCU_TARGET     = atmega2560
 #MCU_TARGET     = atmega2561
+MCU_TARGET      = at90pwm3b 
 #MCU_TARGET     = atmega16
 #MCU_TARGET     = atmega163
 #MCU_TARGET     = atmega164p
