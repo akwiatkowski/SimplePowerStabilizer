@@ -1,17 +1,9 @@
-#include <avr/io.h>
-#include <avr/interrupt.h>
-#include <avr/pgmspace.h>
-#include <inttypes.h>
-#include <util/delay.h>
-#include <util/delay_basic.h>
-#include <stdlib.h>
-
-//konieczne dla dzia�ania niekt�rych urz�dze�
-static void avr_init(void);
+#include "avr_init.c"
+#include "pwm.c"
 
 int main(void) 
 { 
-	//avr_init();
+	avr_init();
 	//acd_init();
   
 	//A - wej�cie
@@ -30,7 +22,12 @@ int main(void)
 	return 0;
 } 
 
-//kod przerwania odebrania ramki po RS
+/*
+ * TODO: pwm version has other interrupt
+ * SIGNAL(SIG_UART_RECV) - Atmega16/32
+ * 
+ * interrupt
+
 SIGNAL(SIG_UART_RECV)
 {
 	cli(); //wy��czanie przerwa�
@@ -40,5 +37,4 @@ SIGNAL(SIG_UART_RECV)
 	
 	sei(); //w��czenie przerwa�
 }
-
-//#include "avr_init.c"
+*/
